@@ -30,7 +30,23 @@ $("#past-button").click(function(){
 });
 
 $("#dark-button").click(function(){
-     $('.all-content').hide();
+    $('.all-content').hide();
     $('#dark-content').show();
-    $('#dark-content').css("background-color", "black");
+    $('body').css("background-color", "black");
+    $('body').css("color", "white");
+});
+
+$("#press-button").click(function(){
+    alert("I SAID DON'T PRESS ME!");
+});
+
+$("#takeover-button").click(function(){
+    $('.all-content').hide();
+    $('#takeover-content').show();
+});
+
+$("#takeover-form-button").click(function(){
+    $("#site-title").hide();
+    $("#site").show();
+    $("#site").html("your site now belongs to:" + $("#takeover-input").val());
 });
